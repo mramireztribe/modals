@@ -1,6 +1,5 @@
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Component, OnInit } from '@angular/core';
-import { provideRoutes } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -10,11 +9,11 @@ import { provideRoutes } from '@angular/router';
 })
 export class ModalComponent implements OnInit {
 
-  constructor(private modalService: BsModalService) { }
+  data: any = [];
+  constructor(private modalService: BsModalService, private modalRef: BsModalRef) { }
 
   ngOnInit(): void {
-    this.modalService.onShown.subscribe((result) => { console.log("result", result); });
-    // console.log("initialState", this._modalService.config.initialState);
+    console.log("Fuck You Kenny!", this.data);
   }
 
 }

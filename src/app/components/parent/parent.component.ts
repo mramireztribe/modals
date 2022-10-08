@@ -25,7 +25,7 @@ export class ParentComponent implements OnInit {
 
   openModal() {
 
-    const initialState: any = { name: 'Kenny' };
+    const initialState: any = { data: { name: 'Kenny' } };
     console.log("name", initialState);
     this.bsModalRef = this._modalService.show(ModalComponent, { class: 'modal-lg', initialState });
   }
